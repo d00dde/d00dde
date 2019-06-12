@@ -7,7 +7,7 @@
 .container {
 	margin: 0 auto;
 	max-width: 1000px;
-	margin-top: 35px;
+	
 	background-color: #eee;
 }
 
@@ -91,8 +91,13 @@
 
 }
 
+.btn-cont {
+	padding-top: 60px;
+	padding-bottom: 30px;
+}
+
 .contact-btn {
-	margin: 60px auto;
+	margin: 0 auto;
 	display: block;
 	width: 200px;
 	height: 60px;
@@ -101,7 +106,6 @@
 	text-align: center;
 	line-height: 60px;
 	text-decoration: none;
-	
 	color: #00BFA5;
 	transition: 1s;
 }
