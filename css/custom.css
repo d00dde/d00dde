@@ -46,13 +46,22 @@
 	
 }
 
+.navbar .navigation .active{
+	font-weight: 700;
+	color: #616161;
+}
+
+.navbar .navigation .active:hover {
+	border-bottom: 0px solid #616161;
+}
+
 .navbar .navigation a{
 	display: block;
 	margin: 0 10px;
 	font-size: 16px;
 	line-height: 35px;
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: 400;
 	color: #00BFA5;
 	box-sizing: border-box;
 	transition: .2s;
@@ -91,7 +100,7 @@
 
 }
 
-.btn-cont {
+.btn-container {
 	padding-top: 60px;
 	padding-bottom: 30px;
 }
@@ -102,10 +111,12 @@
 	width: 200px;
 	height: 60px;
 	border: 2px solid  #00BFA5;
+	border-radius: 10px;
 	align-self: flex-end;
 	text-align: center;
 	line-height: 60px;
 	text-decoration: none;
+	font-weight: 700;
 	color: #00BFA5;
 	transition: 1s;
 }
@@ -113,4 +124,9 @@
 .contact-btn:hover {
 	background-color: #00BFA5;
 	color: #000;
+}
+
+
+.contacts-container {
+	padding-top: 50px;
 }
