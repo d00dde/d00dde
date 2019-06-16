@@ -2,18 +2,28 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap" rel="stylesheet">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Developer page</title>
+	<title>Страница разработчика</title>
 </head>
 <body>
 	<div class="navbar">
 		<div class="logo"><i class="fas fa-code"></i></div>
+		<input type="checkbox" id="burger">
+		
+		<div class="menu-mobile">
+			<a href="index.html">Домой</a>
+			<a href="about.html">Обо мне</a>
+			<a href="portfolio.html">Портфолио</a>
+			<a href="contacts.html">Контакты</a>
+		</div>
+		<label for="burger" class="burger-icon"><i class="fas fa-bars"></i></label>
 		<div class="navigation">
 			<a class="active" href="index.html">Домой</a>
 			<a href="about.html">Обо мне</a>
@@ -25,7 +35,7 @@
 		<div class="wraper-right">
 			<h1 class="animated bounceInRight">Создание сайтов.</h1>
 			<p class="animated bounceInUp delay-1s">Меня зовут Андрей, и я занимаюсь созданием сайтов. Основное направление моей деятельности - front-end разработка. Для создания сайтов я использую как «нативные» технологии браузера (HTML, CSS и JS) так и популярные библиотеки и фреймворки (Bootstrap, SCSS, jQuery, React, VueJS, nodeJS).</p>
-			<p class="animated bounceInUp delay-2s">Кроме front-end разработки я активно изучаю смежные области: back-end, SEO и продвижение сайтов.</p>
+			<p class="animated bounceInUp delay-2s">Кроме front-end разработки я активно изучаю смежные области: back-end, PWA, SEO и продвижение сайтов.</p>
 		</div>
 	</div>
 	<div class="container btn-container">
@@ -68,15 +78,16 @@
 	<div class="container footer">
 		<div class="social">
 			<div>Свяжитесь со мной:</div>
-			<a href="#"><i class="fas fa-phone"></i></a>
-			<a href="#"><i class="far fa-envelope"></i></a>
-			<a href="#"><i class="fab fa-telegram-plane"></i></a>
-			<a href="#"><i class="fab fa-linkedin-in"></i></a>
-			<a href="#"><i class="fab fa-github"></i></a>
+			<a href="#"><i class="fas fa-phone tiped" data="tel"></i></a>
+			<a href="#"><i class="far fa-envelope tiped" data="mail"></i></a>
+			<a href="#"><i class="fab fa-telegram-plane tiped" data="t-gram"></i></a>
+			<a href="#"><i class="fab fa-linkedin-in tiped" data="linked"></i></a>
+			<a href="#"><i class="fab fa-github tiped" data="git"></i></a>
 		</div>
 	</div>
 
 
 </body>
-<script src="custom.js"></script>
+<script src="js/MyTip.js"></script>
+<script src="js/index.js"></script>
 </html>
