@@ -62,13 +62,7 @@ class MyPopup {
 			fontSize: "25px",
 			color: "#009999",
 			colorHover: "lightgrey",
-			button: document.querySelector('.contact-btn'),
-			trigger: function (button, handler, context) {
-				console.log(this);
-				button.addEventListener('click', context.bind(handler, context));
-			},
-
-
+			button: document.querySelector('.contact-btn')
 		}
 		if(options){
 			for (let key in this.options){
@@ -78,12 +72,12 @@ class MyPopup {
 			}
 		}
 
-		this.options.trigger(this.options.button, this.createPopup, this);
+		this.options.button.addEventListener('click', this.bind(this, this.createPopup));
 	}
 
-	bind (func, context) {
+	bind (context, func, args) {
 		return function (){
-			return func.apply(context, arguments);
+			return func.apply(context, args);
 		};
 	}
 
