@@ -1,3 +1,4 @@
 window.onload = () => {
 	new MyTip();
+	
 }
