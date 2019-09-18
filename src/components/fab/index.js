@@ -5,8 +5,8 @@ import { contacts } from '../../data';
 import { Button, Icon } from 'react-materialize';
 
 export default (props) => {
-	const contactList = contacts.map((contact) => {
-		return <a href={contact.link}><Button floating className={contact.color}><i className={contact.icon}></i></Button></a>
+	const contactList = contacts.map(({ color, link, icon}) => {
+		return <a key={color} href={link}><Button floating className={color}><i className={icon}></i></Button></a>
 	});
 	return(
 	  <Button

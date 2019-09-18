@@ -1,0 +1,23 @@
+.tech-list > li{
+    position: relative;
+    padding-left: 25px;
+}
+.tech-list > li:before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background-image: url("/img/react.png");
+    background-size: cover;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-indent: 30px;
+    font-size: 20px;
+}
