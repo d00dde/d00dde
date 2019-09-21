@@ -1,22 +1,23 @@
 import React from 'react';
 import './footer.css';
+import { contacts } from '../../data';
 
 import { Footer } from 'react-materialize';
 
 export default (props) => {
+	const contactList = contacts.map((contact) => {
+		return <li><i className={contact.icon}></i> {contact.title}: <a target='_blank' rel='noopener noreferrer' href={contact.link}>{contact.value}</a></li>
+	});
 	return(
 		<Footer
-		  copyrights="&copy 2015 Copyright Text"
-		  moreLinks={<a />}
-		  links={<ul />}
-		  className={props.bgColor}
+		  copyrights="&copy; Все права защищены правовыми правилами о защите прав."
+			moreLinks={<a/>}
+		  links={<ul>
+			  Контакты:
+			  {contactList}
+		  		</ul> }
+		  className={props.bgColor + ' footer'}
 		>
-			<h5 className="white-text">
-				Footer Content
-			</h5>
-			<p className="grey-text text-lighten-4">
-				You can use rows and columns here to organize your footer content.
-			</p>
 		</Footer>
 	)
 }
