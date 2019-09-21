@@ -13,7 +13,7 @@ export default (props) => {
 					</h2>
 				</div>
 			</div>
-			<Parallax image={<img src='img/parallax3.jpg' alt='first parallax' />} />
+			<Parallax image={<img src='/img/parallax3.jpg' alt='first parallax' />} />
 			<Collapsible accordion={false}>
 				<CollapsibleItem header="1. Реализация TODO-листа на React." >
 					<h5>Простое приложение, поддерживающее добавление, удаление задач, а также выделение задач как важных.</h5>
