@@ -11,6 +11,7 @@ export default (props) => {
 						alignLinks="right"
 						menuIcon={<Icon>dehaze</Icon>}
 						className={props.bgColor}>
+			<Link to='/'>Главная</Link>
 			<Link to='/portfolio'>Портфолио</Link>
 			<Link to='/about'>Обо мне</Link>
 		</Navbar>
