@@ -1,4 +1,6 @@
-  const mainColor = 'light-blue lighten-1';
+
+const host = 'https://d00dde.github.io/d00dde'
+const mainColor = 'light-blue lighten-1';
   const sectionColor = 'white';
 
   const contacts = [
@@ -13,5 +15,6 @@
   export {
   	mainColor,
   	sectionColor,
-  	contacts
+  	contacts,
+	host
   }

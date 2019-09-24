@@ -1,6 +1,7 @@
 import React from 'react';
 import './pages.css';
 import {Collapsible, CollapsibleItem, Parallax } from 'react-materialize';
+import { host } from '../../data';
 
 
 export default (props) => {
@@ -13,7 +14,7 @@ export default (props) => {
 					</h2>
 				</div>
 			</div>
-			<Parallax image={<img src='./img/parallax3.jpg' alt='first parallax' />} />
+			<Parallax image={<img src={host + '/img/parallax3.jpg'} alt='first parallax' />} />
 			<Collapsible accordion={false}>
 				<CollapsibleItem header="1. Реализация TODO-листа на React." >
 					<h5>Простое приложение, поддерживающее добавление, удаление задач, а также выделение задач как важных.</h5>
