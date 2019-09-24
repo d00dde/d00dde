@@ -27,7 +27,7 @@ export default (props) => {
 						</p>
 					</div>
 				</div>
-			<Parallax image={<img src='https://d00dde.github.io/d00dde/img/parallax1.jpg' alt='first parallax'/>} />
+			<Parallax image={<img src='./img/parallax1.jpg' alt='first parallax'/>} />
 			<h3>Преимущества React.</h3>
 			<Features />
 				<div className={`section ${props.bgColor}`}>
@@ -69,7 +69,7 @@ export default (props) => {
 						</p>
 					</div>
 				</div>
-			<Parallax image={<img src='https://d00dde.github.io/d00dde/img/parallax2.jpg' alt='second parallax' />} />
+			<Parallax image={<img src='./img/parallax2.jpg' alt='second parallax' />} />
 				<div className={`section ${props.bgColor}`}>
 					<div className="row container">
 						<h3 className="header">
