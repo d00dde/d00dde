@@ -10,7 +10,7 @@ export default (props) => {
 			<div className={`section ${props.bgColor}`}>
 				<div className="row container">
 					<h2 className="header">
-						Мои работы с использованием React.
+						Мои работы React.
 					</h2>
 				</div>
 			</div>

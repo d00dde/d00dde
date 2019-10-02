@@ -5,7 +5,8 @@ import './pages.css';
 export default () => {
 	return (
 		<div classname='about-page'>
-			About
+			<h2>Обо мне.</h2>
+			<p></p>
 		</div>
 	);
 }
