@@ -16,7 +16,7 @@ export default () => {
       <Navbar bgColor={mainColor}/>
       <Switch>
         <Route path='/' render={()=> <HomePage bgColor={sectionColor}/>} exact/>
-        <Route path='/about' component={AboutPage} />
+        {/*<Route path='/about' component={AboutPage} />*/}
         <Route path='/portfolio' render={()=> <PortfolioPage bgColor={sectionColor}/>} />
         <HomePage bgColor={sectionColor}/>
       </Switch>

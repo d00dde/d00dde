@@ -13,7 +13,7 @@ export default (props) => {
 						className={props.bgColor}>
 			<Link to='/'>Главная</Link>
 			<Link to='/portfolio'>Портфолио</Link>
-			<Link to='/about'>Обо мне</Link>
+			{/*<Link to='/about'>Обо мне</Link>*/}
 		</Navbar>
 		);
 }
