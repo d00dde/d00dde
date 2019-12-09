@@ -1,9 +1,11 @@
 import HomePage from './home-page';
-import AboutPage from './about-page';
+import ResumePage from './resume-page';
 import PortfolioPage from './portfolio-page';
+import ArticlesPage from './articles-page';
 
 export {
 	HomePage, 
-	AboutPage, 
-	PortfolioPage
+	ResumePage, 
+	PortfolioPage,
+	ArticlesPage
 }

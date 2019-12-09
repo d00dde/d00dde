@@ -1,17 +1,20 @@
-const host = 'https://d00dde.github.io/d00dde'
-const mainColor = 'light-blue lighten-1';
-  const sectionColor = 'white';
+const host = 'https://d00dde.github.io/d00dde';
+const colors = {
+	mainColor: 'light-blue lighten-1',
+	sectionColor: 'blue-grey lighten-5', 
+	featuresColor: '#fff9c4'
+};
 
-  const contacts = [
-	  {icon: 'fab fa-viber', title: 'Viber', value: '+380972074557', link: 'viber://chat?number=+380972074557', color: 'deep-purple'},
-	  {icon: 'fas fa-phone-alt', title: 'Телефон', value: '+380972074557',link: 'tel:+380972074557', color: 'green accent-3'},
-	  {icon: 'far fa-envelope', title: 'E-mail', value: 'd48564@gmail.com', link: 'mailto: d48564@gmail.com', color: 'red darken-3'},
-	  {icon: 'fab fa-telegram-plane', title: 'Телеграмм', value: '@D00dde', link: 'tg://resolve?domain=@D00dde1', color: 'blue darken-2'},
-	  {icon: 'fab fa-linkedin-in', title: 'LinkedIn', value: '#', link: '#', color: 'light-blue darken-3'},
-	  {icon: 'fab fa-github', title: 'Github', value: 'https://github.com/d00dde/', link: 'https://github.com/d00dde/', color: 'black'}
+const contacts = [
+	{icon: 'fab fa-viber', title: 'Viber', value: '+380972074557', link: 'viber://chat?number=+380972074557', color: 'deep-purple'},
+	{icon: 'fas fa-phone-alt', title: 'Телефон', value: '+380972074557',link: 'tel:+380972074557', color: 'green accent-3'},
+	{icon: 'far fa-envelope', title: 'E-mail', value: 'd48564@gmail.com', link: 'mailto: d48564@gmail.com', color: 'red darken-3'},
+	{icon: 'fab fa-telegram-plane', title: 'Телеграмм', value: '@D00dde', link: 'tg://resolve?domain=@D00dde1', color: 'blue darken-2'},
+	{icon: 'fab fa-linkedin-in', title: 'LinkedIn', value: 'profile', link: 'https://www.linkedin.com/in/andrei-lopatko-674b62184', color: 'light-blue darken-3'},
+	{icon: 'fab fa-github', title: 'Github', value: 'https://github.com/d00dde/', link: 'https://github.com/d00dde/', color: 'black'}
   ];
 
-  const portfolio = [
+const portfolio = [
 	  {
 		  header: 'Приложение, использующее в работе Google Maps API.',
 		  title: 'Приложение отображает маркеры на карте и позволяет их редактировать.',
@@ -174,10 +177,67 @@ const mainColor = 'light-blue lighten-1';
   	}
   ];
 
-  export {
-  	mainColor,
-  	sectionColor,
-  	contacts,
-	host,
-  	portfolio
+const resume = {
+	personal: {
+		header: 'Персональные данные',
+		fields: [
+			{title: 'Имя: ', value: 'Андрей', link: false},
+      {title: 'Фамилия: ', value: 'Лопатко', link: false},
+      {title: 'Страна: ', value: 'Украина', link: false},
+      {title: 'Город: ', value: 'Кривой Рог', link: false},
+			{title: 'Телефон: ', value: '+38(097) 207-45-57', link: false},
+			{title: 'Email: ', value: 'd48564@gmail.com', link: false},
+			{title: 'Github: ', value: 'https://github.com/d00dde', link: true, href: 'https://github.com/d00dde'},
+			{title: 'Linkedin: ', value: 'https://www.linkedin.com/in/andrei-lopatko-674b62184', link: true, href: 'https://www.linkedin.com/in/andrei-lopatko-674b62184'},
+		]
+	},
+	summary: {
+		header: 'Основная информация.',
+		info: 'Frontend разработка на React и Java Scrit, HTML, CSS, базовое владение С++ и Java.'
+  },
+  skills: {
+    header: 'Умения и навыки.',
+    fields: [
+      'React',
+      'Java Script (ES6+)',
+      'HTML',
+      'CSS',
+      'Redux',
+      'Thunk',
+      'Jest',
+      'Enzyme',
+      'REST API',
+      'Google Maps API',
+      'Firebase',
+      'Git',
+      'Github',
+      'Webpack',
+    ]
+  },
+  education: {
+    header: 'Образование.',
+    fields: [
+      'Криворожский Национальный университет (инженер-технолог) 2001 - 2006 гг. ',
+      'Криворожский Национальный университет (экономика предприятий) 2007 - 2009 гг.',
+      'Онлайн-курс "Udemy: Юрий Бура React + Redux - Профессиональная Разработка" сентябрь 2019 г.',
+      'Онлайн-курс "Webformyself:  React с нуля до профи" октябрь 2019 г.',
+      'Онлайн-курс "Дмитрий Лаврик:  React. Интенсивный курс для программистов" октябрь 2019 г.',
+    ]
+  },
+  experience: {
+    header: 'Опыт работы.',
+    fields: [
+      //2:38
+    ]
   }
+}
+
+
+
+export {
+  colors,
+  contacts,
+	host,
+	portfolio,
+	resume
+}

@@ -7,7 +7,7 @@ import { host } from '../../data';
 export default (props) => {
 	return (
 		<div className='home-page'>
-				<div className={`section ${props.bgColor}`}>
+				<div className={`section ${props.colors.sectionColor}`}>
 					<div className="row container">
 						<h2 className="header">
 							Разработка приложений на React.
@@ -29,9 +29,8 @@ export default (props) => {
 					</div>
 				</div>
 			<Parallax image={<img src={host + '/img/parallax1.jpg'} alt='first parallax'/>} />
-			<h3>Преимущества React.</h3>
-			<Features />
-				<div className={`section ${props.bgColor}`}>
+			<Features bgColor={props.colors.featuresColor}/>
+				<div className={`section ${props.colors.sectionColor}`}>
 					<div className="row container">
 						<p className="grey-text text-darken-3 lighten-3">
 							В своей работе React использует технологию virtual DOM. При работе React создаётся специальный
@@ -71,7 +70,7 @@ export default (props) => {
 					</div>
 				</div>
 			<Parallax image={<img src={host + '/img/parallax2.jpg'} alt='second parallax' />} />
-				<div className={`section ${props.bgColor}`}>
+				<div className={`section ${props.colors.sectionColor}`}>
 					<div className="row container">
 						<h3 className="header">
 							Использование библиотеки materialize.

@@ -22,7 +22,7 @@ export default (props) => {
 	});
 	return (
 		<div className='portfolio-page'>
-			<div className={`section ${props.bgColor}`}>
+			<div className={`section ${props.colors.sectionColor}`}>
 				<div className="row container">
 					<h2 className="header">
 						Мои работы React.

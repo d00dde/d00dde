@@ -1,11 +1,11 @@
 import React from 'react';
 import './app.css';
-import { mainColor, sectionColor } from '../../data';
+import { colors } from '../../data';
 
 import Navbar from '../navbar';
 import Footer from '../footer';
 import Fab from '../fab'
-import {HomePage, AboutPage, PortfolioPage} from '../pages';
+import {HomePage, PortfolioPage, ResumePage, ArticlesPage } from '../pages';
 import { Route, Switch } from 'react-router-dom';
 
 
@@ -13,15 +13,16 @@ export default () => {
 
   return (
   	<div className='container app'>
-      <Navbar bgColor={mainColor}/>
+      <Navbar bgColor={colors.mainColor}/>
       <Switch>
-        <Route path='/' render={()=> <HomePage bgColor={sectionColor}/>} exact/>
-        {/*<Route path='/about' component={AboutPage} />*/}
-        <Route path='/portfolio' render={()=> <PortfolioPage bgColor={sectionColor}/>} />
-        <HomePage bgColor={sectionColor}/>
+        <Route path='/' render={()=> <HomePage colors={colors}/>} exact/>
+        <Route path='/resume' render={()=> <ResumePage colors={colors}/>} />
+        <Route path='/articles' render={()=> <ArticlesPage colors={colors}/>} />
+        <Route path='/portfolio' render={()=> <PortfolioPage colors={colors}/>} />
+        <HomePage colors={colors}/>
       </Switch>
-      <Footer bgColor={mainColor}/>
-      <Fab bgColor={mainColor}/>
+      <Footer bgColor={colors.mainColor}/>
+      <Fab bgColor={colors.mainColor}/>
     </div>
   );
 }
