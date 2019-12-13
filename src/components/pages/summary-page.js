@@ -1,6 +1,6 @@
 import React from 'react';
 import './pages.css';
-import { resume } from '../../data'
+import { summary } from '../../data'
 
 
 export default () => {
@@ -23,9 +23,9 @@ export default () => {
     )}
   
     return (
-		<div className='resume-page'>
-			<div className='resume-container'>
-        {mapDataToJSX (resume.personal, 'personal')}
+		<div className='summary-page'>
+			<div className='summary-container'>
+        {mapDataToJSX (summary.personal, 'personal')}
 			</div>	
 		</div>
 	);

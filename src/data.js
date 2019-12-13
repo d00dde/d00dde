@@ -177,7 +177,7 @@ const portfolio = [
   	}
   ];
 
-const resume = {
+const summary = {
 	personal: {
 		header: 'Персональные данные',
 		fields: [
@@ -186,20 +186,22 @@ const resume = {
       {title: 'Страна: ', value: 'Украина', link: false},
       {title: 'Город: ', value: 'Кривой Рог', link: false},
 			{title: 'Телефон: ', value: '+38(097) 207-45-57', link: false},
-			{title: 'Email: ', value: 'd48564@gmail.com', link: false},
+      {title: 'Email: ', value: 'd48564@gmail.com', link: false},
+      {title: 'Website: ', value: 'https://d00dde.github.io/d00dde', link: true, href: 'https://d00dde.github.io/d00dde'},
 			{title: 'Github: ', value: 'https://github.com/d00dde', link: true, href: 'https://github.com/d00dde'},
 			{title: 'Linkedin: ', value: 'https://www.linkedin.com/in/andrei-lopatko-674b62184', link: true, href: 'https://www.linkedin.com/in/andrei-lopatko-674b62184'},
 		]
 	},
 	summary: {
-		header: 'Основная информация.',
-		info: 'Frontend разработка на React и Java Scrit, HTML, CSS, базовое владение С++ и Java.'
-  },
+		header: 'Сводка.',
+		info: 'Разработка приложений и сайтов на React и Java Scrit, HTML, CSS. Базовое владение С++ и Java. Понимание алгоритмов и паттернов программирования.'
+  	},
   skills: {
     header: 'Умения и навыки.',
     fields: [
       'React',
-      'Java Script (ES6+)',
+			'Java Script (ES6+)',
+			'OOP',
       'HTML',
       'CSS',
       'Redux',
@@ -241,5 +243,5 @@ export {
   contacts,
 	host,
 	portfolio,
-	resume
+	summary
 }
