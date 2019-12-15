@@ -5,10 +5,10 @@
 }
 .summary-container {
   position: relative;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   font-family: 'Roboto Slab', serif;
-  background-color: #f5f5f5;
+  background-color: #eeeeee;
 
 }
 .summary-container .top-decor {
@@ -21,11 +21,11 @@
   display: flex;
   justify-content: flex-start;
   padding-left: 25px;
-  background-color: #e0e0e0;
+  background-color: #bdbdbd;
 }
 .summary-container .personal .photo {
-  width: 200px;
-  height: 240px;
+  width: 220px;
+  height: 265px;
   overflow: hidden;
 }
 .summary-container .personal .photo img {
@@ -41,29 +41,119 @@
   font-size: 30px;
   letter-spacing: 0.05em;
 }
+.summary-container .personal .personal-data .position{
+  padding-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
 .summary-container .personal .personal-data .contacts{
+ max-height: 145px;
  display: flex;
  flex-direction: column;
  flex-wrap: wrap;
+ margin-top: 30px;
 }
-
+.summary-container .personal .personal-data .contacts > div{
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.summary-container .personal .personal-data .contacts .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #212121;
+  color: #f5f5f5;
+  margin-right: 10px;
+}
 
 .summary-container .columns {
   display: flex;
   margin-left: 25px;
 }
 .summary-container .columns .left-col {
-  padding-top: 280px;
-  width: 200px;
+  padding: 320px 15px 15px 15px;
+  width: 220px;
   background-color: #212121;
-  color:#f5f5f5;
+  color: #f5f5f5;
+}
+.summary-container .columns .left-col h3{
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f5f5f5;
+  padding-bottom: 10px;
+}
+.summary-container .columns .left-col h3 i{
+  padding-right: 15px;
+}
+.summary-container .columns .left-col .info{
+  font-size: 12px;
+  padding-top: 10px;
+  text-align: justify;
 }
 
 .summary-container .right-col {
-  padding-top: 280px;
+  padding: 305px 15px 15px 15px;
   width: 70%;
 }
 
-.summary-container .left-col {
- 
+.summary-container .right-col h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #212121;
+  padding-bottom: 10px;
+}
+.summary-container .columns .right-col h3 i{
+  padding-right: 15px;
+}
+.summary-container .columns .right-col ul {
+  list-style: none;
+}
+.summary-container .columns .right-col .skills ul{
+  margin-top: 15px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 150px;
+}
+.summary-container .columns .right-col .skills li{
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+}
+.summary-container .columns .right-col .education ul{
+  margin-top: 15px;
+}
+.summary-container .columns .right-col .education li{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  
+}
+.summary-container .columns .right-col .education li .time{
+  width: 30%;
+  text-align: center;
+}
+.summary-container .columns .right-col .education li .descr{
+  width: 70%;
+  text-align: left;
+}
+.summary-container .columns .right-col .experience ul{
+  padding: 15px 30px;
+  list-style-type: circle;
+}
+.summary-container .columns .right-col .experience li{
+  padding: 10px 0;
+}
+.summary-container .columns .right-col .experience .hint{
+  font-size: 14px;
+  color: #616161;
+}
+.summary-container .columns .right-col .additional ul{
+  padding: 25px;
 }
