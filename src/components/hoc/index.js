@@ -1,7 +1,5 @@
-import withNewPostService from './with-new-post-service';
-import withPagination from './with-pagination';
+import withMainLayuout from './with-main_layuout';
 
 export {
-	withNewPostService,
-	withPagination
+	withMainLayuout
 }

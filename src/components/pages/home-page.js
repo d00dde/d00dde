@@ -1,7 +1,8 @@
 import React from 'react';
 import './pages.css';
+import './home-page.css';
 import { Parallax } from 'react-materialize';
-import Features from '../features';
+import Features from '../modules/features';
 import { host } from '../../data';
 
 export default (props) => {
