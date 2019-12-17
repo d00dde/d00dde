@@ -17,8 +17,6 @@ export default (props) => {
 			<NavLink to='/summary'>Резюме</NavLink>
 			<NavLink to='/portfolio'>Портфолио</NavLink>
 			<NavLink to='/articles'>Статьи</NavLink>
-			<NavLink to='/sumrus'>Статьи</NavLink>
-			<NavLink to='/sumeng'>Статьи</NavLink>
 		</Navbar>
 		);
 }
