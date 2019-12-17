@@ -13,10 +13,12 @@ export default (props) => {
 						alignLinks="right"
 						menuIcon={<Icon>dehaze</Icon>}
 						className={classes.join(' ')}>
-			<NavLink to='/d00dde' exact>Главная</NavLink>
-			<NavLink to='/d00dde/summary'>Резюме</NavLink>
-			<NavLink to='/d00dde/portfolio'>Портфолио</NavLink>
-			<NavLink to='/d00dde/articles'>Статьи</NavLink>
+			<NavLink to='/' exact>Главная</NavLink>
+			<NavLink to='/summary'>Резюме</NavLink>
+			<NavLink to='/portfolio'>Портфолио</NavLink>
+			<NavLink to='/articles'>Статьи</NavLink>
+			<NavLink to='/sumrus'>Статьи</NavLink>
+			<NavLink to='/sumeng'>Статьи</NavLink>
 		</Navbar>
 		);
 }
