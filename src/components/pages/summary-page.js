@@ -6,11 +6,11 @@ import { summary } from '../../data';
 
 export default () => {
   const [language, setLanguage] = useState(false);
+  const langSetting = language ? summary.download.rus : summary.download.eng;
   return (
-    
     <div className='summary-page'>
       <div className='controls'>
-        <a href="/img/photo.jpeg" download>{language ? summary.download.rus.msg : summary.download.eng.msg}</a>
+        <a href={langSetting.path} download>{langSetting.msg}</a>
         <div className="switch">
           <label>
             Eng
