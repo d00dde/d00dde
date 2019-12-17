@@ -162,7 +162,7 @@
   top: 15px;
   left: -20px;
   transition: translateY(-50%);
-  background-image: url('/img/star.png');
+  background-image: url('https://d00dde.github.io/d00dde/img/star.png');
   background-size: cover;
   
 }
