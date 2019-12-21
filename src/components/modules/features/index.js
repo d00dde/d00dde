@@ -2,8 +2,6 @@ import React from 'react';
 import './features.css';
 
 export default (props) => {
-  
-  console.log(props.bgColor);
   return (
     <div className='features-container' style={{backgroundColor: props.bgColor}}>
       <h3>Преимущества React.</h3>
