@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Редактор сайта</title>
+	
+
+	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+	<script src="data.js"></script>
+	<script src="redactor.js"></script>
+	<link rel="stylesheet" href="redactor.css">
+</head>
+<body>
+	<div class="login-wrapper">
+		<form class='sign-in'>
+			<input type="text" class='email' placeholder="Email">
+			<input type="password" class='password' placeholder="Password">
+			<button>Войти</button>
+			<div class="message"></div>
+			<div class="spinner"><div></div><div></div><div></div><div></div></div>
+		</form>
+	</div>
+	<div class="controls">
+		<button class='set-main-data'>Установить основные данные</button>
+		<button class='sign-out'>Выйти</button>
+	</div>
+	<div class="article">
+		<div class="path">
+			<input type="text" class="category" placeholder="Категория">
+			<input type="text" class="subcategory" placeholder="Подкатегория">
+			<input type="text" class="title" placeholder="Заголовок">
+		</div>
+		<textarea class='content'></textarea>
+		<button class='publish'>Опубликовать</button>
+	</div>
+	<pre><div class="tooltip">Tooltip</div></pre>
+</body>
+</html>

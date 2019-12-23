@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import './summary-page.css';
 import Summary from '../modules/summary';
-import { summary } from '../../data';
 
 
-export default () => {
+export default (props) => {
   const [language, setLanguage] = useState(false);
-  const langSetting = language ? summary.download.rus : summary.download.eng;
+  const langSetting = language ? props.data.summary.download.rus : props.data.summary.download.eng;
   return (
     <div className='summary-page'>
       <div className='controls'>
@@ -20,7 +19,7 @@ export default () => {
           </label>
         </div>
       </div>
-      <Summary language={language ? 'rus' : 'eng'} />
+      <Summary language={language ? 'rus' : 'eng'} data={props.data}/>
     </div>
 	);
 }

@@ -16,8 +16,8 @@ export default class {
     firebase.initializeApp(this.config);
   }
 
-  getData = async () => {
-    return await firebase.firestore().doc('source/data').get();
+  getMainData = async () => {
+    return await firebase.firestore().doc('source/mainData').get();
   }
 
 

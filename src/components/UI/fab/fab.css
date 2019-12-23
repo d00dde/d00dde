@@ -1,0 +1,6 @@
+@media (min-width: 600px) {
+	.fixed-action-btn {
+		display: none;
+	}
+}
+

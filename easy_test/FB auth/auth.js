@@ -1,33 +1,57 @@
 	window.onload = () => {
 		const firebaseConfig = {
-	    apiKey: "AIzaSyBzdp5S3En4MgPS6HQvrmUvMpQeS2LgWso",
-	    authDomain: "mario-plan-1d9ea.firebaseapp.com",
-	    databaseURL: "https://mario-plan-1d9ea.firebaseio.com",
-	    projectId: "mario-plan-1d9ea",
-	    storageBucket: "mario-plan-1d9ea.appspot.com",
-	    messagingSenderId: "976237185537",
-	    appId: "1:976237185537:web:4562380cb51e1be194ce00"
+	    apiKey: "AIzaSyCHgKcFxJOk_zSh4phlDVuyitKean87kOo",
+      authDomain: "personal-site-41d91.firebaseapp.com",
+      databaseURL: "https://personal-site-41d91.firebaseio.com",
+      projectId: "personal-site-41d91",
+      storageBucket: "personal-site-41d91.appspot.com",
+      messagingSenderId: "438414038806",
+      appId: "1:438414038806:web:884c1d47a5db1dfbb4e237"
+
   };
   
   firebase.initializeApp(firebaseConfig);
+  const firestore = firebase.firestore();
+  const docRef = firestore.doc('source/mainData');
 
   const $signIn = document.querySelector('.sign-in');
   const $signOut = document.querySelector('.sign-out');
   const $register = document.querySelector('.register');
+  const $input = document.querySelector('.msg-input');
+  const $send = document.querySelector('.send');
+  const $read = document.querySelector('.read');
 
-  const email = 'd48564@gmail.com';
-  const password = '123456';
-  
+  const email = 'test@gmail.com';
+  const password = 'testtest';
+
+  $send.onclick = (e) => {
+    docRef.set(data, true).then(() => {
+      console.log("set: ", $input.value);
+    })
+    .catch((error) => {
+      console.log('errorCode', error.code);
+      console.log('errorMessage', error.message);
+    });
+  };
+  $read.onclick = (e) => {
+    docRef.get().then((responce) => {
+      console.log("get: ", responce.data());
+    }).catch((error) => {
+      console.log('errorCode', error.code);
+      console.log('errorMessage', error.message);
+    });
+  };
 
   
   $signIn.onclick = () => {
     signInWithWithEmailAndPassword (email, password);
   };
   $signOut.onclick = () => {
-    signInOut();
+    signOut();
   };
   $register.onclick = () => {
     createUserWithEmailAndPassword(email, password);
+    console.log(firebase.auth().currentUser);
   };
 
 
@@ -54,9 +78,9 @@
     });
   }
 
-  function signInOut () {
+  function signOut () {
     firebase.auth().signOut().then((responce) => {
-      console.log('signed out successful'); //Googles API token
+      console.log('signed out successful');
       console.log('responce: ', responce);
     }).catch((error) => {
       console.log('errorCode', error.code);

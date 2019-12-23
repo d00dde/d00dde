@@ -8,6 +8,7 @@
 	    messagingSenderId: "976237185537",
 	    appId: "1:976237185537:web:4562380cb51e1be194ce00"
   };
+  //console.log(document.getElementsByTagName('VIDEO')[0].src);
   
   firebase.initializeApp(firebaseConfig);
   const firestore = firebase.firestore();

@@ -1,0 +1,10 @@
+.logo {
+	font-size: 45px;
+	margin-left: 15px;
+	line-height: 56px;
+}
+
+.main-nav .active {
+	background-color: #81d4fa;
+	cursor: default;
+}

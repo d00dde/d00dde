@@ -1,9 +1,8 @@
 import React from 'react';
 import './summary.css';
-import { summary } from '../../../data';
 
-export default ({language}) => {
-  const {personal, about, skills, education, experience, additional } = summary[language];
+export default ({ language, data }) => {
+  const {personal, about, skills, education, experience, additional } = data.summary[language];
   return (
 		<div className="summary-container">
       <div className="personal">
