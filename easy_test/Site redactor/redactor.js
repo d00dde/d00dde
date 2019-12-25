@@ -22,8 +22,8 @@
     event.preventDefault();
     $signInForm.querySelector('.spinner').classList.add('play');
     document.querySelector('.message').innerText = '';
-    const email = document.querySelector('.sign-in .email').value;
-    const password = document.querySelector('.sign-in .password').value;
+    const email = 'd48564@gmail.com'//document.querySelector('.sign-in .email').value;
+    const password = 'mysitepass'//document.querySelector('.sign-in .password').value;
     firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
       console.log('Sign in successful');
       $signInForm.querySelector('.spinner').classList.remove('play');
@@ -62,12 +62,16 @@
     const $title = document.querySelector('.title');
     const $content = document.querySelector('.content');
 
-    const path = 'articles/' + $category.value + '/' + $subcategory.value;
-    
-    firestore.collection(path).add({
-      title: $title.value,
-      content: $content.value.split('\n')
-    }).then(() => {
+    firestore.doc('articles/map').set({
+      [$category.value]:{
+        [$subcategory.value]:{
+          [$title.value]: {
+            content: $content.value.split('\n'),
+            timestamp: new Date()
+          }
+        } 
+      }
+    },{merge: true}).then(() => {
       showTooltip('Content is set');
       $category.value = '';
       $subcategory.value = '';
@@ -77,6 +81,35 @@
       showTooltip('Content set is failure');
       console.log(error.message);
     });
+    /*firestore.collection('articles').where('title', '==', $category.value).get().then((responce) => {
+      if (responce.empty)
+        return firestore.collection('articles').add({
+          title: $category.value
+        });
+      return responce.docs[0].ref;
+    }).then((category) => {
+      category.collection('subcategories').where('title', '==', $subcategory.value).get().then((responce) => {
+        if (responce.empty)
+          return category.collection('subcategories').add({
+            title: $subcategory.value
+          });
+        return responce.docs[0].ref;
+    }).then((subcategory) => {
+      return subcategory.collection('articles').add({
+        title: $title.value,
+        content: $content.value,
+        timestamp: new Date()
+      });
+    }).then(() => {
+      showTooltip('Content is set');
+      $category.value = '';
+      $subcategory.value = '';
+      $title.value = '';
+      $content.value = '';
+    }).catch((error) => {
+      showTooltip('Content set is failure');
+      console.log(error.message);
+    })});*/
   }
 
   function showTooltip (message, delay = 2000) {

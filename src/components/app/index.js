@@ -6,8 +6,7 @@ import {HomePage, PortfolioPage, SummaryPage, ArticlesPage } from '../pages';
 import Loader from '../modules/loader';
 import ErrorScreen from '../modules/errorScreen';
 import { Route, Switch } from 'react-router-dom';
-import Server from '../../server'
-
+import Server from '../../firebase-server';
 export default class extends Component {
   state = {
     loading: true,
@@ -17,8 +16,7 @@ export default class extends Component {
   }
   constructor () {
     super();
-    const server = new Server();
-    server.getMainData().then((data) => {
+    Server.getMainData().then((data) => {
       this.setState({
           loading: false,
           error: false,
@@ -33,7 +31,6 @@ export default class extends Component {
         errorMsg: error.message,
         data: {}
       });
-    
     });
   }
   render () {  
@@ -44,16 +41,16 @@ export default class extends Component {
     const { host, colors, contacts, portfolio, summary } = this.state.data;
     return (
       <div className='container app'>
-        <Navbar bgColor={colors.mainColor}/>
+        <Navbar data={{colors}}/>
         <Switch>
           <Route path='/' render={()=> <HomePage data={{host, colors}}/>} exact/>
           <Route path='/summary' render={()=> <SummaryPage data={{summary, colors}}/>} />
           <Route path='/articles' render={()=> <ArticlesPage />} />
-          <Route path='/portfolio' render={()=> <PortfolioPage data={{portfolio, colors}}/>} />
+          <Route path='/portfolio' render={()=> <PortfolioPage data={{host, portfolio, colors}}/>} />
           <HomePage />
         </Switch>
-        <Footer bgColor={colors.mainColor}/>
-        <Fab bgColor={colors.mainColor}/>
+        <Footer data={{colors, contacts}}/>
+        <Fab data={{colors, contacts}}/>
       </div>
         
     );

@@ -1,10 +1,9 @@
 import React from 'react';
 import './pages.css';
 import {Collapsible, CollapsibleItem, Parallax } from 'react-materialize';
-import { host, portfolio } from '../../data';
 
 
-export default (props) => {
+export default ({ data:{ host, portfolio, colors}}) => {
 	const projects = portfolio.map((project, idx) => {
 		return(
 			<CollapsibleItem header={`${idx + 1}. ${project.header}`} key={project.header}>
@@ -21,7 +20,7 @@ export default (props) => {
 	});
 	return (
 		<div className='portfolio-page'>
-			<div className={`section ${props.colors.sectionColor}`}>
+			<div className={`section ${colors.sectionColor}`}>
 				<h2 className="header">
 					Мои работы React.
 				</h2>

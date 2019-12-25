@@ -1,10 +1,8 @@
 import React from 'react';
 import './footer.css';
-import { contacts } from '../../data';
-
 import { Footer } from 'react-materialize';
 
-export default (props) => {
+export default ({ data:{ contacts, colors } }) => {
 	const contactList = contacts.map((contact) => {
 		return <li key={contact.title}><i className={contact.icon}></i> {contact.title}: <a target='_blank' rel='noopener noreferrer' href={contact.link}>{contact.value}</a></li>
 	});
@@ -16,7 +14,7 @@ export default (props) => {
 			  Контакты:
 			  {contactList}
 		  		</ul> }
-		  className={props.bgColor + ' footer'}
+		  className={colors.mainColor + ' footer'}
 		>
 		</Footer>
 	)

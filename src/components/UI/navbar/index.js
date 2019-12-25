@@ -5,9 +5,9 @@ import { NavLink, Link } from 'react-router-dom';
 import { Navbar, Icon } from 'react-materialize';
 
 
-export default (props) => {
+export default ({ data:{ colors } }) => {
 	const classes = ['main-nav'];
-	classes.push(props.bgColor);
+	classes.push(colors.mainColor);
 	return (	
 	<Navbar brand={<Link to='/' exact='true'><i className="fab fa-react logo"></i></Link>}
 						alignLinks="right"
