@@ -24,3 +24,9 @@
   padding: 25px 0;
   text-align: right;
 }
+.controls input[type="checkbox"]:checked + .lever {
+  background-color: #039be5!important;
+}
+.controls .lever:after {
+  background-color: #039be5!important;
+}

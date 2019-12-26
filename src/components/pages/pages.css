@@ -9,3 +9,6 @@ p {
   text-indent: 30px;
   font-size: 20px;
 }
+.page {
+	min-height: 80vh;
+}

@@ -1,0 +1,25 @@
+.article-page {
+
+}
+.article-page .service { 
+	font-size: 18px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.article-page .service .create-time {
+	color: #757575;
+}
+.article-page .title {
+	position: relative;
+	text-align: center;
+	
+}
+.article-page hr {
+	width: 70%;
+}
+
+
+

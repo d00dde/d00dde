@@ -25,7 +25,10 @@ class FirebaseServer {
     return await firebase.firestore().doc('source/mainData').get();
   }
   getArticles = async () => {
-    return await firebase.firestore().doc('articles/map').get();
+    return await firebase.firestore().doc('source/map').get();
+  }
+  getArticle = async (path) => {
+    return (await firebase.firestore().collection('articles').where('path', '==', path).get()).docs[0];
   }
 }
 export default new FirebaseServer();

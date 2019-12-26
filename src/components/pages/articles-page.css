@@ -1,0 +1,17 @@
+.article-page .article {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+	margin: 10px;
+	padding: 5px;
+	transition: .5s;
+}
+.article-page .article:hover {
+	background-color: #fafafa;
+}
+.article-page .article a:hover{
+	text-decoration: underline;
+}
+.article-page .article span {
+	color: #757575;
+}
