@@ -3,7 +3,7 @@ import withFetch from '../hoc/withFetch';
 
 import {Navbar, Footer, Fab} from '../UI';
 import {HomePage, PortfolioPage, SummaryPage, ArticlePage, ArticlesPage } from '../pages';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
  const App = (props) => {
   const { host, colors, contacts, portfolio, summary } = props.data;
@@ -16,6 +16,7 @@ import { Route, Switch } from 'react-router-dom';
         <Route path='/portfolio' render={()=> <PortfolioPage data={{host, portfolio, colors}}/>} />
         <Route path='/articles' render={()=> <ArticlesPage colors={colors}/>}/>        
         <Route path='/article/:id' render={({ match })=> <ArticlePage colors={colors} match={match}/>} />
+        <Redirect to='/' />
       </Switch>
       <Footer data={{colors, contacts}}/>
       <Fab data={{colors, contacts}}/>
