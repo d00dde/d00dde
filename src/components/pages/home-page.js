@@ -5,9 +5,9 @@ import { Parallax } from 'react-materialize';
 import Features from '../modules/features';
 
 export default (props) => {
-	const { colors, host } = props.data;
-	console.log('colors: ', colors);
-	console.log('host: ', host);
+	//const { colors, host } = props.data;
+	//console.log('colors: ', colors);
+	//console.log('host: ', host);
 	return ( null
 		/*<div className='home-page'>
 				<div className={`section ${colors.sectionColor}`}>
