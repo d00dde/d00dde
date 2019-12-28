@@ -1,4 +1,7 @@
-.article-page .article {
+.articles-page {
+	padding: 20px;
+}
+.articles-page .article {
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 1px solid black;
@@ -6,12 +9,12 @@
 	padding: 5px;
 	transition: .5s;
 }
-.article-page .article:hover {
+.articles-page .article:hover {
 	background-color: #fafafa;
 }
-.article-page .article a:hover{
+.articles-page .article a:hover{
 	text-decoration: underline;
 }
-.article-page .article span {
+.articles-page .article span {
 	color: #757575;
 }

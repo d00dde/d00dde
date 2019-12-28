@@ -29,14 +29,8 @@ import './articles-page.css';
     }
     return result;
 	}
-  const formatDate = (seconds) => {
-    let formated = '';
-    const date = new Date(seconds*1000);
-    formated += date.getDate() + ' ';
-    formated += date.getDate();
-    return formated;
-  }
-  const articlesList = dataThunk(props.data).map((category) => { 
+
+	const articlesList = dataThunk(props.data).map((category) => { 
   	return (<CollapsibleItem header={category.title} key={category.title}>
   						<Collapsible accordion={false}>	
   						{category.subcategories.map((subcategory) => {
@@ -58,7 +52,7 @@ import './articles-page.css';
   					</CollapsibleItem>)
     });
 	return (
-		<div className={`article-page page section ${props.colors.sectionColor}`}>
+		<div className={`articles-page page section ${props.colors.sectionColor}`}>
 			<Collapsible accordion={false}>
 				{articlesList}
 			</Collapsible>
