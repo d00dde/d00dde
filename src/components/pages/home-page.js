@@ -7,8 +7,8 @@ import Features from '../modules/features';
 export default ({ data:{ colors, host }}) => {
 	console.log('colors: ', colors);
 	console.log('host: ', host);
-	return (
-		<div className='home-page'>
+	return ( null
+		/*<div className='home-page'>
 				<div className={`section ${colors.sectionColor}`}>
 					<div className="row container">
 						<h2 className="header">
@@ -99,6 +99,6 @@ export default ({ data:{ colors, host }}) => {
 						</p>
 					</div>
 				</div>
-		</div>
+		</div>*/
 	);
 }
