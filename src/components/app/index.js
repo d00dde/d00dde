@@ -16,7 +16,6 @@ import { Route, Switch } from 'react-router-dom';
         <Route path='/portfolio' render={()=> <PortfolioPage data={{host, portfolio, colors}}/>} />
         <Route path='/articles' render={()=> <ArticlesPage colors={colors}/>}/>        
         <Route path='/article/:id' render={({ match })=> <ArticlePage colors={colors} match={match}/>} />
-        <HomePage />
       </Switch>
       <Footer data={{colors, contacts}}/>
       <Fab data={{colors, contacts}}/>

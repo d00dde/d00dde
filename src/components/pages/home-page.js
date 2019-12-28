@@ -4,13 +4,9 @@ import './home-page.css';
 import { Parallax } from 'react-materialize';
 import Features from '../modules/features';
 
-export default (props) => {
-	console.log(props);
-	//const { colors, host } = props.data;
-	//console.log('colors: ', colors);
-	//console.log('host: ', host);
-	return ( null
-		/*<div className='home-page'>
+export default ({ data:{ colors, host } }) => {
+	return (
+		<div className='home-page'>
 				<div className={`section ${colors.sectionColor}`}>
 					<div className="row container">
 						<h2 className="header">
@@ -101,6 +97,6 @@ export default (props) => {
 						</p>
 					</div>
 				</div>
-		</div>*/
+		</div>
 	);
 }
