@@ -5,6 +5,7 @@ import { Parallax } from 'react-materialize';
 import Features from '../modules/features';
 
 export default (props) => {
+	console.log(props);
 	//const { colors, host } = props.data;
 	//console.log('colors: ', colors);
 	//console.log('host: ', host);
