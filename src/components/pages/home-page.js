@@ -5,6 +5,8 @@ import { Parallax } from 'react-materialize';
 import Features from '../modules/features';
 
 export default ({ data:{ colors, host }}) => {
+	console.log('colors: ', colors);
+	console.log('host: ', host);
 	return (
 		<div className='home-page'>
 				<div className={`section ${colors.sectionColor}`}>
