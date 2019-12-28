@@ -7,7 +7,6 @@ import './article-page.css';
 
 const ArticlePage = (props) => {
 	const { title, content, timestamp } = props.data;
-	console.log(props);
 	return (
 		<div className={`article-page page section ${props.colors.sectionColor}`}>
 			<div className='service'>
