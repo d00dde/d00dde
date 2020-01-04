@@ -17,6 +17,15 @@
 
   const $setMainData = document.querySelector('.set-main-data');
   const $publish = document.querySelector('.publish');
+  const $delete = document.querySelector('.delete');
+  const $articlesList = document.querySelector('.articles-list');
+
+  const $category = document.querySelector('.category');
+  const $subcategory = document.querySelector('.subcategory');
+  const $title = document.querySelector('.title');
+  const $content = document.querySelector('.content');
+
+  getArticles();
 
   $signInForm.onsubmit = function (event) {
     event.preventDefault();
@@ -57,12 +66,7 @@
   }
   
   $publish.onclick = async () => {
-    const $category = document.querySelector('.category');
-    const $subcategory = document.querySelector('.subcategory');
-    const $title = document.querySelector('.title');
-    const $content = document.querySelector('.content');
     const path = `${$category.value}_${$subcategory.value}_${$title.value}`;
-
     try {
       await firestore.doc('source/map').set({
         [$category.value]:{
@@ -93,8 +97,82 @@
       $subcategory.value = '';
       $title.value = '';
       $content.value = '';
+      getArticles ();
     } catch (error) {
       showTooltip('Content set is failure');
+      console.log(error.message);
+    }
+  }
+
+  $delete.onclick = async () => {
+    const path = `${$category.value}_${$subcategory.value}_${$title.value}`;
+    try {
+      const responce = await firestore.collection('articles').where('path', '==' , path).get();
+      if(responce.empty){
+        throw new Error('Article not exist');
+      }
+      await responce.docs[0].ref.delete();
+      const map = (await firestore.doc('source/map').get()).data();
+      delete map[$category.value][$subcategory.value][$title.value];
+      await firestore.doc('source/map').set(map);
+      showTooltip('Article deleted');
+      getArticles ();
+
+    } catch (error) {
+      showTooltip('Failed to delete article');
+      console.log(error.message);
+    }
+
+  }
+
+  $articlesList.onclick = async (e) => {
+    if(e.target.tagName !== 'A'){
+      return;
+    }
+    e.preventDefault();
+    try {
+      const responce = await firebase.firestore().collection('articles').where('path', '==', e.target.getAttribute('path')).get();
+      const article = responce.docs[0].data();
+      const parsePath = article.path.split('_');
+      $category.value = parsePath[0];
+      $subcategory.value = parsePath[1];
+      $title.value = parsePath[2];
+      $content.value = '';
+      article.content.forEach((paragraph) => {
+          $content.value += paragraph + '\n';
+      });
+      showTooltip('Article uploaded successfully');
+    } catch (error) {
+      showTooltip('Article loading failed');
+      console.log(error.message);
+    }
+  }
+ 
+  async function getArticles () {
+    try {
+    const request = await firebase.firestore().doc('source/map').get();
+    const articlesMap = request.data();
+    let list = '<ul>';
+    for (const category in articlesMap) {
+      list += '<li class="category">' + category ;
+      list += '<ul>';
+        for(subcategory in articlesMap[category]) {
+          list += '<li>' + subcategory;
+          list += '<ul>';
+            for (article in articlesMap[category][subcategory]) {
+              list += `<li><a href ="#" path="${category}_${subcategory}_${article}">${article}</a>`;
+              list += '</li>';
+            }
+          list += '</ul>';
+          list += '</li>';
+        }
+      list += '</ul>';
+      list += '</li>';
+    }
+    list += '</ul>';
+    $articlesList.innerHTML = list;
+    } catch (error) {
+      showTooltip('Loading article list failed');
       console.log(error.message);
     }
   }

@@ -7,13 +7,14 @@
 
 body {
 	position: relative;
-	height: 100vh;
+	min-height: 100vh;
 }
 button {
 	margin: 15px;
 	padding: 5px;
 	font-size: 20px;
 	border-radius: 5px;
+	cursor: pointer;
 	border: 2px solid #64b5f6;
 	color: #fff;
 	background-color: #64b5f6;
@@ -124,6 +125,27 @@ input:focus, textarea:focus {
 	width: 100%;
 	font-size: 15px;
 	height: 350px;
+}
+.article-controls {
+	display: flex;
+	justify-content: space-between;
+}
+.article-controls .delete {
+	display: flex;
+	background-color: #e57373;
+	border-color: #e57373;
+}
+.article-controls .delete:hover {
+	display: flex;
+	background-color: #fff;
+	color: #e57373;
+}
+.articles-list {
+	padding: 40px;
+}
+.articles-list ul {
+	padding-left: 15px;
+	list-style: none;
 }
 
 .tooltip{

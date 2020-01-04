@@ -20,6 +20,12 @@
 .article-page hr {
 	width: 70%;
 }
+.article-page p {
+	margin: 25px;
+}
+.article-page a:hover {
+	text-decoration: underline;
+}
 
 
 

@@ -16,7 +16,8 @@ const ArticlePage = (props) => {
 			<h2 className='title'>{title}</h2>
 			<hr />
 			{content.map((paragraph) => {
-				return <p key={paragraph}>{paragraph}</p>
+				return <p key={paragraph}
+								  dangerouslySetInnerHTML={{__html: paragraph}}></p>
 			})}
 		</div>
 	)

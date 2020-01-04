@@ -7,7 +7,6 @@ import './pages.css';
 import './articles-page.css';
 
   const ArticlesPage = (props) => {
-	//console.log(document.getElementsByTagName('VIDEO')[0].children[0].src);
   const dataThunk = (data) => {
 		const result =[];
 		for (const category in data) {
