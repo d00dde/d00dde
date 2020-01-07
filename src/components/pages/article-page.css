@@ -1,5 +1,9 @@
-.article-page {
-
+strong {
+	font-weight: 700;
+}
+img {
+	display:block;
+	margin: 0 auto;
 }
 .article-page .service { 
 	font-size: 18px;
@@ -26,6 +30,7 @@
 .article-page a:hover {
 	text-decoration: underline;
 }
+
 
 
 
